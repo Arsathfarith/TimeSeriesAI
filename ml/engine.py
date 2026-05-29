@@ -10,14 +10,10 @@ from .models import (
     train_moving_average,
     train_arima,
     train_sarima,
-    train_prophet,
-    train_lstm,
     forecast_linear_regression,
     forecast_moving_average,
     forecast_arima,
     forecast_sarima,
-    forecast_prophet,
-    forecast_lstm,
 )
 
 
@@ -115,8 +111,6 @@ class ForecastEngine:
             train_moving_average,
             train_arima,
             train_sarima,
-            train_prophet,
-            train_lstm,
         ]
         results = []
         for constructor in models:
@@ -235,10 +229,6 @@ class ForecastEngine:
             index, forecast = forecast_arima(raw_model, self.df, self.target_col, self.feature_cols, forecast_steps, self.freq)
         elif model_type == 'sarima':
             index, forecast = forecast_sarima(raw_model, self.df, self.target_col, self.feature_cols, forecast_steps, self.freq)
-        elif model_type == 'prophet':
-            index, forecast = forecast_prophet(raw_model, self.df, self.target_col, self.feature_cols, forecast_steps, self.freq)
-        elif model_type == 'lstm':
-            index, forecast = forecast_lstm(raw_model, self.df, self.target_col, self.feature_cols, forecast_steps, self.freq)
         else:
             raise RuntimeError(f'Unsupported model type: {model_type}')
 
