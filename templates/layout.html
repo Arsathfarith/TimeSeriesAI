@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TimeSeriesAI Forecast Dashboard</title>
+  <link rel="stylesheet" href="/static/css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="/static/js/white.js"></script>
+  <script src="/static/js/app.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="side-panel">
+      <div class="brand">
+        <div class="brand-icon">TS</div>
+        <div>
+          <h1>TimeSeriesAI</h1>
+          <p>Forecasting platform</p>
+        </div>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="/dashboard">Dashboard</a>
+        <a href="/forecast">Forecast</a>
+        <a href="/compare">Model Compare</a>
+        <a href="/explain">Explainability</a>
+        <a href="/observe">Observability</a>
+        <a href="/upload">Upload Data</a>
+      </nav>
+    </aside>
+    <main class="main-panel">
+      <header class="top-bar">
+        <div>
+          <h2>AI Time Series Forecasting</h2>
+          <p>Modern analytics dashboard for trending, modeling, and monitoring.</p>
+        </div>
+        <div class="top-controls">
+          <span class="status-pill" id="service-status">Loading status…</span>
+        </div>
+      </header>
+      <section class="page-content">
+        {% block content %}{% endblock %}
+      </section>
+    </main>
+  </div>
+  <div id="toast" class="toast hidden"></div>
+</body>
+</html>

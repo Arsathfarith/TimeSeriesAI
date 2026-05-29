@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="page-grid">
+  <div class="card summary-card">
+    <h3>Dataset summary</h3>
+    <div id="summary-panel">Loading dataset metrics…</div>
+  </div>
+  <div class="card highlight-card">
+    <h3>Best model</h3>
+    <div id="best-model-panel">Awaiting training data.</div>
+  </div>
+  <div class="card chart-card">
+    <h3>Model accuracy comparison</h3>
+    <canvas id="accuracy-chart"></canvas>
+  </div>
+  <div class="card chart-card">
+    <h3>Seasonal signal</h3>
+    <canvas id="seasonality-chart"></canvas>
+  </div>
+</div>
+{% endblock %}

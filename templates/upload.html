@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="page-grid">
+  <div class="card">
+    <h3>Upload dataset</h3>
+    <form id="upload-form" enctype="multipart/form-data">
+      <label for="dataset">CSV dataset</label>
+      <input id="dataset" name="dataset" type="file" accept=".csv" required />
+      <button type="submit" class="button primary">Upload dataset</button>
+    </form>
+  </div>
+  <div class="card">
+    <h3>Train forecasting models</h3>
+    <button id="train-button" class="button secondary">Train all models</button>
+    <div id="train-status">Upload a dataset and build models automatically.</div>
+  </div>
+  <div class="card chart-card">
+    <h3>Dataset diagnostics</h3>
+    <div id="dataset-details">Awaiting upload.</div>
+  </div>
+  <div class="card">
+    <h3>Training log</h3>
+    <div id="training-log" class="log-panel">No training activity yet.</div>
+  </div>
+</div>
+{% endblock %}
