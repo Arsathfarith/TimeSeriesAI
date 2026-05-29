@@ -1,14 +1,40 @@
+# Python environment
 venv/
+.venv/
+env/
+.Python
+
+# Bytecode
 __pycache__/
-*.pyc
+*.py[cod]
 *.pyo
 *.pyd
-.Python
-env/
+
+# Packaging
 build/
 dist/
-.models/
+*.egg-info/
+pip-wheel-metadata/
+
+# Runtime files
 *.log
+*.sqlite3
+*.db
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Test and lint caches
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Data and models
 data/input.csv
 models/best_model.pkl
 models/model_meta.json
